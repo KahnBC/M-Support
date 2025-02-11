@@ -1,0 +1,239 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ljubicasta: #1f1139;
+  --plava: #9dcdc0;
+  --zuta: #fcffd7;
+  --siva: #E4F1ED;
+}
+
+
+body {
+  font-family: 'Literata', serif;
+  line-height: 1.6;
+  background: var(--siva);
+  scroll-behavior: smooth;
+  color: var(--ljubicasta);
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--ljubicasta);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 10px 10px var(--plava), 20px 20px var(--ljubicasta);
+}
+
+.btn {
+  background: transparent;
+  font-weight: 600;
+  padding: 5px 16px;
+  border: 1px solid var(--ljubicasta);
+  box-shadow: 3px 3px var(--ljubicasta);
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: var(--plava);
+    background: var(--ljubicasta);
+    border: 1px solid var(--plava);
+    box-shadow: 3px 3px var(--plava), 6px 6px var(--ljubicasta);
+  }
+}
+
+.top {
+  height: 26px;
+  background: var(--ljubicasta);
+  color: var(--plava);
+
+  .top-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 2160px;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 26px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  .nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 16px;
+
+    .logo img {
+      height: 80px;
+      box-shadow: none;
+    }
+
+    .menu-items .menu-list {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+
+      .drop-down {
+        position: absolute;
+        left: -10%;
+        top: 40px;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        color: var(--ljubicasta);
+        border: 1px solid var(--ljubicasta);
+        box-shadow: 3px 3px var(--ljubicasta);
+        display: none;
+        opacity: 0;
+        transition: all 1s ease-in;
+      }
+
+      .drop:hover .drop-down{
+        display: block;
+        opacity: 0.9;
+      }
+
+      a {
+        font-weight: 600;
+        padding: 5px 16px;
+        border: 1px solid transparent;transition: all 0.3s ease-in;
+
+        &:hover {
+          color: var(--plava);
+          background: var(--ljubicasta);
+          border: 1px solid var(--plava);
+          box-shadow: 3px 3px var(--ljubicasta);
+        }
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      
+      .menu-toggle {
+        cursor: pointer;
+      }
+
+      .mobile-menu-items.active {
+        left: 0;
+      }
+
+      .mobile-menu-items {
+        position: absolute;
+        top: 100%;
+        left: 102%;
+        width: 100%;
+        height: 40vh;
+        backdrop-filter: blur(10px);
+        transition: left 0.5s ease-in;
+
+        .mobile-menu-list {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+
+          a {
+            padding: 5px 16px;
+            border: 1px solid var(--ljubicasta);
+            box-shadow: 3px 3px var(--ljubicasta);
+          }
+
+          .drop-down {
+            margin-top: 16px;
+            padding: 5px 16px;
+            background: transparent;
+            color: var(--ljubicasta);
+            border: 1px solid var(--ljubicasta);
+            box-shadow: 3px 3px var(--ljubicasta);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Hero */
+.hero {
+  max-width: 1600px;
+  height: calc(100vh - 126px);
+  margin: 100px auto 0px;
+  padding: 30px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  
+  .hero-text {
+    margin: 0 auto 30px;
+    padding: 16px;
+    grid-column: span 2;
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .type-effect {
+      color: var(--plava);
+    }
+  }
+  
+  .hero-img1 {
+    margin: 0 auto 30px;
+    grid-column: 2 / 4;
+    grid-row: 2;
+    
+    img {
+      max-height: 300px;
+    }
+  }
+
+  .hero-img2 {
+    margin: 0 auto 30px;
+    grid-column: 3;
+    
+    img {
+      max-height: 300px;
+    }
+  }
+
+  .hero-img3 {
+    margin: 0 auto 30px;
+    grid-row: span 2;
+    
+    img {
+      max-width: 300px;
+    }
+  }
+}
