@@ -41,7 +41,7 @@ img {
   font-weight: 600;
   padding: 5px 16px;
   border: 1px solid var(--ljubicasta);
-  box-shadow: 3px 3px var(--ljubicasta);
+  box-shadow: 6px 6px var(--ljubicasta);
   transition: all 0.3s ease-in;
 
   &:hover {
@@ -341,7 +341,6 @@ img {
   text-align: center;
   background: var(--plava);
   margin: 0 auto;
-  margin-bottom: 100vh;
 
   .tekst {
     width: 50vw;
@@ -373,5 +372,130 @@ img {
     background-size: cover;
     background-image: url(./Img/onama1.webp);
     background-attachment: fixed;
+  }
+}
+
+#kontakt {
+  background: var(--ljubicasta);
+  color: var(--plava);
+  padding: 100px 30px 50px;
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 100px;
+    font-size: 50px;
+  }
+
+  p {
+    text-align: right;
+    font-family: 18px;
+  }
+
+  .kontakt-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 1800px;
+    margin: 0 auto;
+
+    .kontakt-forma {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      height: 600px;
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid var(--plava);  box-shadow: 10px 10px var(--plava), 20px 20px var(--siva);
+
+      h3 {
+        grid-column: span 2;
+        font-size: 26px;
+      }
+
+      .form-group {
+        margin: 0 auto;
+
+        &:nth-child(6) {
+          grid-column: span 2;
+        }
+
+        input {
+          background: transparent;
+          color: var(--plava);
+          font-family: inherit;
+          font-family: inherit;
+          font-size: 16px;
+          padding-bottom: 10px;
+          
+          &:focus {
+            outline: 0;
+          }
+        }
+
+        textarea {
+          background: transparent;
+          color: var(--plava);
+          font-family: inherit;
+          font-family: inherit;
+          font-size: 16px;
+          padding-bottom: 10px;
+          width: 468px;
+          height: 150px;
+          
+          &:focus {
+            outline: 0;
+          }
+        }
+
+        .btn {
+          background: transparent;
+          color: var(--plava);
+          font-weight: 600;
+          padding: 10px 20px;
+          border: 1px solid var(--plava);
+          box-shadow: 6px 6px var(--plava);
+          transition: all 0.3s ease-in;
+        
+          &:hover {
+            color: var(--ljubicasta);
+            background: var(--plava);
+            border: 1px solid var(--siva);
+            box-shadow: 3px 3px var(--siva), 6px 6px var(--plava);
+          }
+        }
+      }
+    }
+
+    .info {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      p {
+        font-size: 18px;
+        padding: 16px;
+        text-align: right;
+      }
+
+      .logo {
+        margin: 0 auto;
+        margin-bottom: 50px;
+  
+        img {
+          box-shadow: none;
+          width: 250px;
+        }
+      }
+    }
   }
 }
