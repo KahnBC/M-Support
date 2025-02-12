@@ -181,7 +181,7 @@ img {
 
 /* Hero */
 .hero {
-  max-width: 1600px;
+  max-width: 1800px;
   height: calc(100vh - 26px);
   margin: 80px auto 0px;
   padding: 30px;
@@ -330,5 +330,48 @@ img {
         font-size: 18px;
       }
     }
+  }
+}
+
+/* O Nama */
+#onama {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--plava);
+  margin: 0 auto;
+  margin-bottom: 100vh;
+
+  .tekst {
+    width: 50vw;
+
+    .onama {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      margin: 0 auto;
+      height: 500px;
+      width: 500px;
+  
+      h3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+  
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .slika {
+    height: 500px;
+    width: 50vw;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./Img/onama1.webp);
+    background-attachment: fixed;
   }
 }
