@@ -87,6 +87,7 @@ img {
     .logo img {
       height: 80px;
       box-shadow: none;
+      backdrop-filter: blur(10px);
     }
 
     .menu-items .menu-list {
@@ -99,7 +100,7 @@ img {
 
       .drop-down {
         position: absolute;
-        left: -10%;
+        left: -40%;
         top: 40px;
         background: transparent;
         backdrop-filter: blur(10px);
@@ -118,6 +119,7 @@ img {
 
       a {
         font-weight: 600;
+        font-size: 20px;
         padding: 5px 16px;
         border: 1px solid transparent;transition: all 0.3s ease-in;
 
@@ -180,27 +182,35 @@ img {
 /* Hero */
 .hero {
   max-width: 1600px;
-  height: calc(100vh - 126px);
-  margin: 100px auto 0px;
+  height: calc(100vh - 26px);
+  margin: 80px auto 0px;
   padding: 30px;
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
-  
+
+  h1 {
+    font-size: 50px;
+    grid-column: 1 / 5;
+  }
+
   .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    text-align: left;
+    height: 200px;
+    width: 500px;
     margin: 0 auto 30px;
     padding: 16px;
     grid-column: span 2;
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
+    grid-row: 2;
     
-    p {
-      font-size: 24px;
+    h3 {
+      font-size: 30px;
       margin-bottom: 20px;
     }
 
@@ -212,7 +222,7 @@ img {
   .hero-img1 {
     margin: 0 auto 30px;
     grid-column: 2 / 4;
-    grid-row: 2;
+    grid-row: 3;
     
     img {
       max-height: 300px;
@@ -222,7 +232,8 @@ img {
   .hero-img2 {
     margin: 0 auto 30px;
     grid-column: 3;
-    
+    grid-row: 2;
+
     img {
       max-height: 300px;
     }
@@ -230,10 +241,94 @@ img {
 
   .hero-img3 {
     margin: 0 auto 30px;
-    grid-row: span 2;
+    grid-row: 2 / span 2;
     
     img {
       max-width: 300px;
+    }
+  }
+}
+
+/* Usluge */
+#usluge {
+  margin: 50px auto;
+  text-align: center;
+
+  h1{
+    font-size: 50px;
+    margin-bottom: 100px;
+  }
+
+  .usluge1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: min(90vw, 1800px);
+    height: 600px;
+    background: var(--plava);
+    margin: 50px auto;
+    padding: 50px 30px 100px;
+
+    h2 {
+      font-size: 30px;
+      text-align: left;
+      grid-column: span 4;
+      margin-bottom: 20px;
+    }
+
+    .usluge {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 0 auto;
+      padding: 16px;
+      text-align: left;
+      height: 300px;
+      width: 250px;
+      border: 1px solid var(--ljubicasta);  box-shadow: 10px 10px var(--ljubicasta), 20px 20px var(--siva);
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  .usluge2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: min(90vw, 1800px);
+    height: 600px;
+    background: var(--ljubicasta);
+    color: var(--plava);
+    margin: 50px auto;
+    padding: 50px 30px 100px;
+
+    h2 {
+      font-size: 30px;
+      text-align: left;
+      grid-column: span 4;
+      margin-bottom: 20px;
+    }
+
+    .usluge {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      margin: 0 auto;
+      padding: 16px;
+      text-align: left;
+      height: 300px;
+      width: 250px;
+      border: 1px solid var(--plava);  box-shadow: 10px 10px var(--plava), 20px 20px var(--siva);
+
+      h3 {
+        font-size: 18px;
+      }
     }
   }
 }
