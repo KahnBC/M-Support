@@ -121,13 +121,16 @@ img {
         font-weight: 600;
         font-size: 20px;
         padding: 5px 16px;
-        border: 1px solid transparent;transition: all 0.3s ease-in;
+        background: var(--plava);
+        border: 1px solid var(--ljubicasta);
+        box-shadow: 6px 6px var(--ljubicasta);
+        transition: all 0.3s ease-in;
 
         &:hover {
           color: var(--plava);
           background: var(--ljubicasta);
           border: 1px solid var(--plava);
-          box-shadow: 3px 3px var(--ljubicasta);
+          box-shadow: 3px 3px var(--plava), 6px 6px var(--ljubicasta);
         }
       }
     }
