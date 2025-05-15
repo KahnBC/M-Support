@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,9 +10,8 @@
   --ljubicasta: #1f1139;
   --plava: #9dcdc0;
   --zuta: #fcffd7;
-  --siva: #E4F1ED;
+  --siva: #e4f1ed;
 }
-
 
 body {
   font-family: 'Literata', serif;
@@ -19,7 +20,6 @@ body {
   scroll-behavior: smooth;
   color: var(--ljubicasta);
 }
-
 
 a {
   text-decoration: none;
@@ -112,7 +112,7 @@ img {
         transition: all 1s ease-in;
       }
 
-      .drop:hover .drop-down{
+      .drop:hover .drop-down {
         display: block;
         opacity: 0.9;
       }
@@ -137,7 +137,7 @@ img {
 
     .mobile-menu {
       display: none;
-      
+
       .menu-toggle {
         cursor: pointer;
       }
@@ -186,7 +186,7 @@ img {
 .hero {
   max-width: 1800px;
   height: calc(100vh - 26px);
-  margin: 80px auto 0px;
+  margin: 80px auto 100px;
   padding: 30px;
   display: grid;
   gap: 16px;
@@ -211,7 +211,7 @@ img {
     padding: 16px;
     grid-column: span 2;
     grid-row: 2;
-    
+
     h3 {
       font-size: 30px;
       margin-bottom: 20px;
@@ -221,12 +221,12 @@ img {
       color: var(--plava);
     }
   }
-  
+
   .hero-img1 {
     margin: 0 auto 30px;
     grid-column: 2 / 4;
     grid-row: 3;
-    
+
     img {
       max-height: 300px;
     }
@@ -245,7 +245,7 @@ img {
   .hero-img3 {
     margin: 0 auto 30px;
     grid-row: 2 / span 2;
-    
+
     img {
       max-width: 300px;
     }
@@ -257,7 +257,7 @@ img {
   margin: 50px auto;
   text-align: center;
 
-  h1{
+  h1 {
     font-size: 50px;
     margin-bottom: 100px;
   }
@@ -290,14 +290,15 @@ img {
       text-align: left;
       height: 300px;
       width: 250px;
-      border: 1px solid var(--ljubicasta);  box-shadow: 10px 10px var(--ljubicasta), 20px 20px var(--siva);
+      border: 1px solid var(--ljubicasta);
+      box-shadow: 10px 10px var(--ljubicasta), 20px 20px var(--siva);
 
       h3 {
         font-size: 18px;
       }
     }
   }
-  
+
   .usluge2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -327,7 +328,8 @@ img {
       text-align: left;
       height: 300px;
       width: 250px;
-      border: 1px solid var(--plava);  box-shadow: 10px 10px var(--plava), 20px 20px var(--siva);
+      border: 1px solid var(--plava);
+      box-shadow: 10px 10px var(--plava), 20px 20px var(--siva);
 
       h3 {
         font-size: 18px;
@@ -356,12 +358,12 @@ img {
       margin: 0 auto;
       height: 500px;
       width: 500px;
-  
+
       h3 {
         font-size: 30px;
         margin-bottom: 30px;
       }
-  
+
       p {
         font-size: 18px;
       }
@@ -416,7 +418,8 @@ img {
       height: 600px;
       width: 500px;
       margin: 0 auto;
-      border: 1px solid var(--plava);  box-shadow: 10px 10px var(--plava), 20px 20px var(--siva);
+      border: 1px solid var(--plava);
+      box-shadow: 10px 10px var(--plava), 20px 20px var(--siva);
 
       h3 {
         grid-column: span 2;
@@ -437,7 +440,7 @@ img {
           font-family: inherit;
           font-size: 16px;
           padding-bottom: 10px;
-          
+
           &:focus {
             outline: 0;
           }
@@ -452,7 +455,7 @@ img {
           padding-bottom: 10px;
           width: 468px;
           height: 150px;
-          
+
           &:focus {
             outline: 0;
           }
@@ -466,7 +469,7 @@ img {
           border: 1px solid var(--plava);
           box-shadow: 6px 6px var(--plava);
           transition: all 0.3s ease-in;
-        
+
           &:hover {
             color: var(--ljubicasta);
             background: var(--plava);
@@ -493,7 +496,7 @@ img {
       .logo {
         margin: 0 auto;
         margin-bottom: 50px;
-  
+
         img {
           box-shadow: none;
           width: 250px;
